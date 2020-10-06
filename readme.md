@@ -1,3 +1,3 @@
 # Board Game Collector
 
-## An exercise in builing a CRUD application in Django
+## An exercise in building a CRUD application in Django
