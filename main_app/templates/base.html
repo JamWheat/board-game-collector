@@ -15,19 +15,17 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 </head>
 <body>
-  <header class="">
-    <nav>
-      <div class="">
-        <ul>
-          <li><a href="/" class="">Board Game Collector</a></li>
-        </ul>
-        <ul class="">
-          <li><a href="/about">About</a></li>
-          <li><a href="/games">View All Games</a></li>
-        </ul>
+  <nav>
+    <div class="nav-bar">
+      <div>
+        <a href="/" class=""><h2>Board Game Collector</h2></a>
       </div>
-    </nav>
-  </header>
+      <div class="right-nav">
+        <a href="/about">About</a>
+        <a href="/games">View All Games</a>
+      <div>
+    </div>
+  </nav>
   <main class="">
     {% block content %}
     {% endblock %}

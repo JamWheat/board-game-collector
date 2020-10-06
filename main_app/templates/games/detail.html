@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Game Details</h1>
+
+<div class="index-card">
+  <p>Title: {{ game.name }}</p>
+  <p>Designer: {{ game.designer }}</p>
+  <p>Year Published: {{ game.pub_year }}</p>
+  <p>Publisher: {{ game.publisher }}</p>
+</div>
+
+{% endblock content %}
+
+
