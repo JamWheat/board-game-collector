@@ -21,8 +21,9 @@
         <a href="/" class=""><h2>Board Game Collector</h2></a>
       </div>
       <div class="right-nav">
-        <a href="/about">About</a>
-        <a href="/games">View All Games</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'games_create' %}">Add Game</a>
+        <a href="{% url 'index' %}">View All Games</a>
       <div>
     </div>
   </nav>
