@@ -69,6 +69,7 @@ footer {
 }
 
 .index-card-holder{
+  width: 800px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,7 +86,18 @@ footer {
   background-color: #b7b7e7;
 }
 
-.index-card a:hover {
+.detail-card{
+  margin: 5px;
+  width: 250px;
+  height: 300px;
+  border: solid;
+  border-color: #2f2f4d;
+  border-radius: 10px;
+  border-width: 3px;
+  background-color: #b7b7e7;
+}
+
+.index-card:hover {
   text-decoration: none;
-  background-color: #9494e4;
+  background-color: #ddddf0;
 }
