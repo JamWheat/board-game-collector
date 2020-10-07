@@ -9,6 +9,10 @@
   <p>Year Published: {{ game.pub_year }}</p>
   <p>Publisher: {{ game.publisher }}</p>
 </div>
+<div class="detail-action">
+  <a href="{% url 'games_update' game.id %}">Edit</a>
+  <a href="{% url 'games_delete' game.id %}">Delete</a>
+</div>
 
 {% endblock content %}
 
