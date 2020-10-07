@@ -5,7 +5,7 @@
 
 <div class="index-card-holder">
   {% for game in games %}
-    <a href="/games/{{ game.id }}">
+    <a href="{% url 'detail' game.id %}">
       <div class="index-card">
         {% comment %} <span class="">{{ game.name }}</span> {% endcomment %}
         <p>Title: {{ game.name }}</p>
