@@ -51,4 +51,7 @@ class Play(models.Model):
 
   def __str__(self):
     return f'Played on {self.date}'
+
+  class Meta:
+    ordering = ['-date']
   
