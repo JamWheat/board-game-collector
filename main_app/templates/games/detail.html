@@ -15,6 +15,11 @@
 </div>
 <h3>Play Sessions</h3>
 <div>
+  <form method="post">
+    {% csrf_token %}
+    {{ play_form.as_p }}
+    <input type="submit" class="" value="Add Play Session">
+  </form>
   <table>
     <thead>
       <tr>

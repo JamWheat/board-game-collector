@@ -1,6 +1,7 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render
 from .models import Game
+from .forms import PlayForm
 
 # Create your views here.
 
@@ -16,7 +17,11 @@ def games_index(request):
 
 def games_detail(request, game_id):
   game = Game.objects.get(id=game_id)
-  return render(request, 'games/detail.html', { 'game': game })
+  play_form = PlayForm()
+  return render(request, 'games/detail.html', { 
+    'game': game,
+    'play_form': play_form
+  })
 
 class GameCreate(CreateView):
   model = Game

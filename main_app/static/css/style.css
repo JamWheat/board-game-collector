@@ -68,6 +68,10 @@ footer {
   margin-right: 0;
 }
 
+.right-nav a{
+  padding: 0 10px;
+}
+
 .index-card-holder{
   width: 800px;
   display: flex;
