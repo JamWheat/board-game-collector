@@ -22,10 +22,16 @@
       </div>
       <div class="right-nav">
         <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'expansions_create' %}">Add an Expansion</a>
-        <a href="{% url 'expansions_index' %}">View All Expansions</a>
-        <a href="{% url 'games_create' %}">Add Game</a>
-        <a href="{% url 'index' %}">View All Games</a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'expansions_create' %}">Add an Expansion</a>
+          <a href="{% url 'expansions_index' %}">View All Expansions</a>
+          <a href="{% url 'games_create' %}">Add Game</a>
+          <a href="{% url 'index' %}">View All Games</a>
+          <a href="{% url 'logout' %}">Log Out</a>
+        {% else %}
+          <a href="{% url 'signup' %}">Sign Up</a>
+          <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
       <div>
     </div>
   </nav>
