@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Expansion List</h1>
+{% for expansion in expansion_list %}
+  <a href="{% url 'expansions_detail' expansion.id %}">
+    <div class="index-card">
+        <div>
+            <p>Title: {{ expansion.name }}</p>
+            <p>Year Published: {{ expansion.pub_year }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+{% endblock %}

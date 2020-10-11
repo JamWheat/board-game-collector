@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Expansion Details</h1>
+<div class="detail-card">
+  <div>
+    <p>Title: {{ expansion.title }}</p>
+    <p>Year Published: {{ expansion.pub_year }}</p>
+  </div>
+  <div>
+    <a href="{% url 'expansions_update' expansion.id %}">Edit</a>
+    <a href="{% url 'expansions_delete' expansion.id %}">Delete</a>
+  </div>
+</div>
+  
+
+{% endblock %}

@@ -37,7 +37,38 @@
     </tbody>
   </table>
 </div>
+<hr>
+<h3>{{ game.name }}'s Expansions</h3>
+{% if game.expansions.count %}
+  {% for expansion in game.expansions.all %}
+    <div class="detail-card">
+      <p>Title: {{ expansion.title }}</p>
+      <p>Year Published: {{ expansion.pub_year }}</p>
+    </div>
+  {% endfor %}
+{% else %}
+  <h5>No Expansions</h5>
+{% endif %}
 
+<h3>Available Expansions</h3>
+{% if expansions.count %}
+  {% for expansion in expansions.all %}
+    <div class="detail-card">
+      <div>
+        <p>Title: {{ expansion.title }}</p>
+        <p>Year Published: {{ expansion.pub_year }}</p>
+      </div>
+      <div>
+        <form action="{% url 'assoc_exp' game.id expansion.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <h5>{{game.name}} already has all expansions available</h5>
+{% endif %}
 {% endblock content %}
 
 

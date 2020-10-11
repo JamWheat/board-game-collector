@@ -22,11 +22,23 @@ RATING = (
   ('5', '5 stars'),
 )
 
+class Expansion(models.Model):
+  title = models.CharField(max_length=200)
+  pub_year = models.IntegerField()
+
+  def __str__(self):
+      return self.title
+  
+  def get_absolute_url(self):
+    return reverse('expansions_detail', kwargs={"pk": self.id})
+  
+
 class Game(models.Model):
   name = models.CharField(max_length=100)
   publisher = models.CharField(max_length=100)
   designer = models.CharField(max_length=100)
   pub_year = models.IntegerField()
+  expansions = models.ManyToManyField(Expansion)
 
   def __str__(self):
     return self.name
@@ -55,3 +67,4 @@ class Play(models.Model):
   class Meta:
     ordering = ['-date']
   
+
